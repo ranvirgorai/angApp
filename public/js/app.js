@@ -16,7 +16,7 @@ app.config(function($stateProvider,$urlRouterProvider){
 			url:"/",
 			templateUrl :"template/main.html",
 			controller: function($scope){
-				$scope.name="Angular Test App";
+				$scope.name="Angular Test App Home";
 					}
 				})
 		.state("about",{
