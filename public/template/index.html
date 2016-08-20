@@ -20,7 +20,22 @@
 			</td>
 		</tr>
 		<tr >
-			<td class="footer">	Footer		</td>
+			<td class="footer">
+				<div ng-controller="countryCtrl as cC">
+				{{cC.name}}
+				<div ng-controller="stateCtrl as aC">
+				{{cC.name}}-{{aC.name}}
+				<div ng-controller="cityCtrl as ctC">
+				{{cC.name}}-{{aC.name}}-{{ctC.name}}
+				</div>
+				</div>
+				</div>
+
+
+
+
+
+				</td>
 		</tr>
 </table>
 

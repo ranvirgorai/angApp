@@ -11,6 +11,7 @@ var app=angular.module("ngAngExp",["ui.router"]);
 */
 
 app.config(function($stateProvider,$urlRouterProvider){
+	$stateProvider.caseInenitiveMatch=true;
 	$stateProvider
 		.state("app",{
 			url:"/",
@@ -45,4 +46,16 @@ app.config(function($stateProvider,$urlRouterProvider){
 
 			.controller('studentsCtrl',function ($scope) {
 			$scope.students=['Ravi','Rohit','Rahul','Soniya','Deepika'];
+			})
+
+			.controller("countryCtrl",function(){
+				this.name="India";
+			})
+
+			.controller("stateCtrl",function(){
+				this.name="Maharastra";
+			})
+
+			.controller("cityCtrl",function(){
+				this.name="Mumbai";
 			});
