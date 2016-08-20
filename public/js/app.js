@@ -14,36 +14,35 @@ app.config(function($stateProvider,$urlRouterProvider){
 	$stateProvider
 		.state("app",{
 			url:"/",
-			templateUrl :"template/main.html",
-			controller: function($scope){
-				$scope.name="Angular Test App Home";
-					}
+			templateUrl :"template/index.html",
+			controller: ""
 				})
-		.state("about",{
-			url:"/about",
-			templateUrl :"template/about.html",
-			controller: function($scope){
-				$scope.name="About Page";
-					}
-		})
-
-		.state("about.me",{
-			url:"/me",
-			templateUrl :"template/about-me.html",
-			controller: function($scope){
-				$scope.name="My Page";
-					}
-		})
-
-		.state("about.me.list",{
-			url:"/list",
-			template:"<br>{{name}}</br>",
-			controller: function($scope){
-				$scope.name="My List";
-					}
-		});
-
-
-
+		.state("home",{
+			url:"/home",
+			templateUrl :"template/home.html",
+			controller: "homeCtrl"
+				})
+		.state("cources",{
+			url:"/cources",
+			templateUrl :"template/cources.html",
+			controller: "courcesCtrl"
+				})
+			.state("students",{
+			url:"/students",
+			templateUrl :"template/students.html",
+			controller: "studentsCtrl"
+				})
  	$urlRouterProvider.otherwise("/")
-});
+})
+
+			.controller('homeCtrl',function ($scope) {
+			$scope.message="Home Page";
+			})
+
+			.controller('courcesCtrl',function ($scope) {
+			$scope.cources=['VB','JAVA','ANGULAR','NODE','Python','Ruby','Java Script'];
+			})
+
+			.controller('studentsCtrl',function ($scope) {
+			$scope.students=['Ravi','Rohit','Rahul','Soniya','Deepika'];
+			});

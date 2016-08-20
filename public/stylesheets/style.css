@@ -6,3 +6,31 @@ body {
 a {
   color: #00B7FF;
 }
+
+.header{
+	 width: 800px;
+	 height: 80px;
+	 text-align: center;
+	 background-color:#BDBDBD;
+}
+
+.footer{
+
+	background-color:#BDBDBD;
+	text-align: center;
+
+}
+
+.leftMenu{
+	height: 500px;
+	width: 150px;
+	background-color:#f9f9f9;
+}
+
+.mainContent{
+	height: 500px;
+	width: 650px;
+	background-color:#E6E6E6;
+}
+
+

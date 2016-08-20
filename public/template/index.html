@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web Site Header</title>
+</head>
+<body>
+<h2>Hello</h2>
+	<table>
+		<tr >
+			<td class="header" colspan="2">		Web Site Head	</td>
+		</tr>
+		<tr >
+			<td class="leftMenu">
+				<a ui-sref="home" > Home</a><br>
+				<a ui-sref="cources" > Cources</a><br>
+				<a ui-sref="students" > Students</a>
+			</td>
+			<td class="mainContent">
+				<ng-view></ng-view>
+			</td>
+		</tr>
+		<tr >
+			<td class="footer">	Footer		</td>
+		</tr>
+</table>
+
+
+
+</body>
+</html>
