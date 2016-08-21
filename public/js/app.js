@@ -14,26 +14,26 @@ app.config(function($stateProvider,$urlRouterProvider){
 	$stateProvider.caseInenitiveMatch=true;
 	$stateProvider
 		.state("app",{
-			url:"/",
+			url:"",
 			templateUrl :"template/index.html",
 			controller: ""
 				})
-		.state("home",{
-			url:"/home",
+		.state("app.home",{
+			url:"home",
 			templateUrl :"template/home.html",
 			controller: "homeCtrl"
 				})
-		.state("cources",{
-			url:"/cources",
+		.state("app.cources",{
+			url:"cources",
 			templateUrl :"template/cources.html",
 			controller: "courcesCtrl"
 				})
-			.state("students",{
-			url:"/students",
+			.state("app.students",{
+			url:"students",
 			templateUrl :"template/students.html",
 			controller: "studentsCtrl"
 				})
- 	$urlRouterProvider.otherwise("/")
+ 	$urlRouterProvider.otherwise("")
 })
 
 			.controller('homeCtrl',function ($scope) {
