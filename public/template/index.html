@@ -4,42 +4,22 @@
 	<title>Web Site Header</title>
 </head>
 <body>
-<h2>Hello</h2>
-	<table>
-		<tr >
-			<td class="header" colspan="2">		Web Site Head	</td>
-		</tr>
-		<tr >
-			<td class="leftMenu">
-				<a ui-sref="app.home" > Home</a><br>
-				<a ui-sref="app.cources" > Cources</a><br>
-				<a ui-sref="app.students" > Students</a>
-			</td>
-			<td class="mainContent">
-				<ui-view></ui-view>
-			</td>
-		</tr>
-		<tr >
-			<td class="footer">
-				<div ng-controller="countryCtrl as cC">
-				{{cC.name}}
-				<div ng-controller="stateCtrl as aC">
-				{{cC.name}}-{{aC.name}}
-				<div ng-controller="cityCtrl as ctC">
-				{{cC.name}}-{{aC.name}}-{{ctC.name}}
-				</div>
-				</div>
-				</div>
+<div class="container">
+<nav class="navbar navbar-default" role="navigation">
+       <ul class="nav navbar-nav">
+      <li><a ui-sref="app.home" ui-sref-active="activeState" > Home<span class="sr-only">(current)</span></a></li>
+			<li><a ui-sref="app.cources" ui-sref-active="activeState" > Cources</a><br></li>
+			<li><a ui-sref="app.students"  ui-sref-active="activeState" > Students</a></li>
+      <li><a ui-sref="app.login"  ui-sref-active="activeState" > Login</a></li>
+      <li><a ui-sref="app.httptest"  ui-sref-active="activeState" > Http</a></li>
+      <li><a ui-sref="app.todo"  ui-sref-active="activeState" > Todo</a></li>
+      <li><a ui-sref="app.filter"  ui-sref-active="activeState" > My Filters</a></li>
+      <li><a ui-sref="app.directive"  ui-sref-active="activeState" >Custom Directive</a></li>
+    </ul>
+</nav>
+<br/>
 
-
-
-
-
-				</td>
-		</tr>
-</table>
-
-
-
+<ui-view></ui-view>
+</div>
 </body>
 </html>

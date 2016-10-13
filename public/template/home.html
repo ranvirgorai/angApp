@@ -1,10 +1,36 @@
-<h1>{{message}}</h1>
-<p>
-	AngularJS (commonly referred to as "Angular" or "Angular.js") is a complete JavaScript-based open-source front-end web application framework mainly maintained by Google and by a community of individuals and corporations to address many of the challenges encountered in developing single-page applications. The JavaScript components complement PhoneGap, the framework used for developing cross-platform mobile apps. It aims to simplify both the development and the testing of such applications by providing a framework for client-side model–view–controller (MVC) and model–view–viewmodel (MVVM) architectures, along with components commonly used in rich Internet applications.
+<h4 align="center">{{message}}</h4>
 
-The AngularJS framework works by first reading the HTML page, which has embedded into it additional custom tag attributes. Angular interprets those attributes as directives to bind input or output parts of the page to a model that is represented by standard JavaScript variables. The values of those JavaScript variables can be manually set within the code, or retrieved from static or dynamic JSON resources.
+<div class="container">
 
-According to JavaScript analytics service Libscore, AngularJS is used on the websites of Wolfram Alpha, NBC, Walgreens, Intel, Sprint, ABC News, and approximately 8,400 other sites out of 1 million tested in July 2015.[4]
 
-AngularJS is the frontend part of the MEAN stack, consisting of MongoDB database, Express.js web application server framework, Angular.js itself, and Node.js runtime environment.
-</p>
+<div class="panel panel-warning" >
+<div class="panel-heading">Registration</div>
+	<div class="panel-body" >
+	<form name="regForm">
+	<div class="form-group">
+	<div ><input type="text" placeholder="Enter UserName" class="form-control" ng-model="uName" name="uName" required></div>
+	<p style="color:red"><span ng-show="regForm.uName.$touched && regForm.uName.$invalid">Name is required.</span></p>
+
+	</div>
+	<div class="form-group">
+	<div ><input type="date" placeholder="Enter DOB" class="form-control" ng-model="uDob" required></div>
+	</div>
+	<div class="form-group">
+	<div ><input type="phone" placeholder="Enter PHONE" class="form-control" ng-model="uPhone" required></div>
+	</div>
+	<div class="form-group">
+	<div ><input type="email" placeholder="Enter Email" class="form-control" ng-model="uEmail" required></div>
+	</div>
+	<div class="form-group">
+	<button type="button" class="btn btn-info pull-right" ng-click="register()">Submmit</button>
+	</div>
+	</form>
+	<div class="panel-footer">
+		<a ui-sref="app.cources">Click Here To Login</a>
+	</div>
+	</div>
+
+
+
+</div>
+</div>

@@ -1,6 +1,29 @@
-<h1>Cources Offer </h1>
-<ul>
-	<li ng-repeat="cource in cources">
-	{{cource}}
-	</li>
-</ul>
+<div class="container">
+<h4 align="center">{{message}}</h4>
+
+<div class="container">
+
+
+<div class="panel panel-warning" >
+<div class="panel-heading">Login</div>
+	<div class="panel-body" >
+	<form name="regForm">
+	<div ><input type="text" placeholder="Enter UserName" class="form-control" ng-model="uName" name="uName" required></div>
+	<br>
+	<div class="form-group">
+	<div ><input type="email" placeholder="Enter Email" class="form-control" ng-model="uEmail" required></div>
+	</div>
+	<div class="form-group">
+	<button type="button" class="btn btn-success pull-right" ng-click="login()">Submmit</button>
+	</div>
+	</form>
+	<div class="panel-footer">
+		<a ui-sref="app.cources">Click Here To Login</a>
+	</div>
+	</div>
+
+
+
+</div>
+</div>
+</div>
